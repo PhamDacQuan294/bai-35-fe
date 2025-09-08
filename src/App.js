@@ -4,10 +4,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
+import LayoutDefault from './layout/LayoutDefault';
 
 function App() {
   return (
     <>
+      <LayoutDefault />
+
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="about" element={<About />} />
