@@ -9,7 +9,7 @@ import Blog from './pages/Blog';
 import BlogNews from './pages/Blog/BlogNews';
 import BlogRelated from './pages/Blog/BlogRelated';
 import BlogAll from './pages/Blog/BlogAll';
-// import BlogDetail from './pages/Blog/BlogDetail';
+import BlogDetail from './pages/Blog/BlogDetail';
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
             <Route index element={<BlogAll />}/>
             <Route path="news" element={<BlogNews />}/>
             <Route path="related" element={<BlogRelated />}/>
+            <Route path=":id" element={<BlogDetail />}/>
           </Route>  
 
           <Route path="*" element={<Error404 />} />
