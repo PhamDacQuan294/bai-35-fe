@@ -23,6 +23,9 @@ function LayoutDefault() {
               <li>
                 <NavLink to="/contact" className={navLinkActive}>Contact</NavLink>
               </li>
+              <li>
+                <NavLink to="/blog" className={navLinkActive}>Blog</NavLink>
+              </li>
             </ul>
           </div>
         </header>

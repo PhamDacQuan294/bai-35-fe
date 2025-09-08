@@ -5,6 +5,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
 import LayoutDefault from './layout/LayoutDefault';
+import Blog from './pages/Blog';
+import BlogNews from './pages/Blog/BlogNews';
 
 function App() {
   return (
@@ -14,6 +16,11 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+
+          <Route path="blog" element={<Blog />}>
+            <Route path="news" element={<BlogNews />}/>
+          </Route>  
+
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>
