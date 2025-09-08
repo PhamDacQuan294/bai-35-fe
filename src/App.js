@@ -8,7 +8,7 @@ import LayoutDefault from './layout/LayoutDefault';
 import Blog from './pages/Blog';
 import BlogNews from './pages/Blog/BlogNews';
 import BlogRelated from './pages/Blog/BlogRelated';
-// import BlogAll from './pages/Blog/BlogAll';
+import BlogAll from './pages/Blog/BlogAll';
 // import BlogDetail from './pages/Blog/BlogDetail';
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
 
           <Route path="blog" element={<Blog />}>
+            <Route index element={<BlogAll />}/>
             <Route path="news" element={<BlogNews />}/>
             <Route path="related" element={<BlogRelated />}/>
           </Route>  
@@ -34,4 +35,4 @@ function App() {
 
 export default App;
 
-//Ngoài những cái path được định nghĩa ra thì * là những cái path còn lại chưa được định nghĩa
+// Khi vào đường dẫn blog thì nó load blog và nó load luôn Blogall luôn
