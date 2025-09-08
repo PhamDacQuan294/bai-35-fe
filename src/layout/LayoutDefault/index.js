@@ -1,5 +1,5 @@
 import "./LayoutDefault.scss";
-import {  Link } from "react-router-dom";
+import {  Link, Outlet } from "react-router-dom";
 
 function LayoutDefault() {
   return (
@@ -22,7 +22,7 @@ function LayoutDefault() {
           </div>
         </header>
         <main className="layout-default__main">
-          Nội dung chính...
+          <Outlet />
         </main>
         <footer className="layout-default__footer">
           Copyright @ 2023 by 28Tech

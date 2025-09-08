@@ -9,13 +9,13 @@ import LayoutDefault from './layout/LayoutDefault';
 function App() {
   return (
     <>
-      <LayoutDefault />
-
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<Error404 />} />
+      <Routes>  
+        <Route path="/" element={<LayoutDefault />}>
+          <Route path="/" element={<Home />}/>
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<Error404 />} />
+        </Route>
       </Routes>
     </>
   );
