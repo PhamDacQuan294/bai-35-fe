@@ -1,7 +1,12 @@
 import "./LayoutDefault.scss";
-import {  Link, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 
 function LayoutDefault() {
+  //Cách custom lại class, mình để trực tiếp menu__link menu__link--active vào thì nó sẽ không ăn theo.
+  const navLinkActive = (e) => { 
+    return e.isActive ? "menu__link menu__link--active" : "menu__link";
+  }
+
   return (
     <>
       <div className="layout-default">
@@ -10,13 +15,13 @@ function LayoutDefault() {
           <div className="menu">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/" className={navLinkActive}>Home</NavLink>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <NavLink to="/about" className={navLinkActive}>About</NavLink>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <NavLink to="/contact" className={navLinkActive}>Contact</NavLink>
               </li>
             </ul>
           </div>
