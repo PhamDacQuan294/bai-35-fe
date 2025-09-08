@@ -10,6 +10,9 @@ import BlogNews from './pages/Blog/BlogNews';
 import BlogRelated from './pages/Blog/BlogRelated';
 import BlogAll from './pages/Blog/BlogAll';
 import BlogDetail from './pages/Blog/BlogDetail';
+import Login from './pages/Login';
+import InfoUser from './pages/InfoUser';
+import PrivateRouters from './components/PrivateRouters';
 
 function App() {
   return (
@@ -26,6 +29,12 @@ function App() {
             <Route path="related" element={<BlogRelated />}/>
             <Route path=":id" element={<BlogDetail />}/>
           </Route>  
+
+          <Route path="login" element={<Login />} />
+
+          <Route element={<PrivateRouters />} > 
+            <Route path="info-user" element={<InfoUser />} />
+          </Route>
 
           <Route path="*" element={<Error404 />} />
         </Route>
