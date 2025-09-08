@@ -25,6 +25,14 @@ function LayoutDefault() {
               </li>
               <li>
                 <NavLink to="/blog" className={navLinkActive}>Blog</NavLink>
+                <ul className="menu__sub">
+                  <li>
+                    <NavLink  to="/blog/news" className={navLinkActive}>Blog News</NavLink>
+                  </li>
+                  <li>
+                    <NavLink  to="/blog/related" className={navLinkActive}>Blog Related</NavLink>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
